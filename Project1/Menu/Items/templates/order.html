@@ -1,0 +1,470 @@
+{% load static %}
+
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-image: url('/static/images/food2.webp');
+            }
+        </style>
+        
+        <script>
+
+            
+            
+            function order()
+
+            {
+                
+                var z=document.getElementById('orders').value;
+
+                if(z=='Breakfast')
+                {
+                var b= document.getElementById('I').style.display='inline';
+                var c= document.getElementById('D').style.display='inline';
+                var e= document.getElementById('P').style.display='inline';
+
+                var f= document.getElementById('idli').style.display='inline';
+                var g= document.getElementById('dosa').style.display='inline';
+                var h= document.getElementById('puri').style.display='inline';
+                var i= document.getElementById('calculate').style.display='inline';
+
+                var ok=document.getElementById('ok').style.display="inline";
+
+                }
+
+                else if(z=='Lunch')
+
+                {
+                var j= document.getElementById('WR').style.display='inline';
+                var k= document.getElementById('B').style.display='inline';
+                var l= document.getElementById('T').style.display='inline';
+
+                var m= document.getElementById('white').style.display='inline';
+                var n= document.getElementById('biriyani').style.display='inline';
+                var o= document.getElementById('thali').style.display='inline';
+                var p= document.getElementById('calculate1').style.display='inline';
+
+                var okk=document.getElementById('okk').style.display="inline";
+                }
+
+                else if(z=='Dinner')
+
+                {
+                var q= document.getElementById('R').style.display='inline';
+                var r= document.getElementById('C').style.display='inline';
+                var s= document.getElementById('F').style.display='inline';
+
+                var t= document.getElementById('roti').style.display='inline';
+                var u= document.getElementById('chapathi').style.display='inline';
+                var v= document.getElementById('fried').style.display='inline';
+                var w= document.getElementById('calculate2').style.display='inline';
+
+                var okkk=document.getElementById('okkk').style.display="inline";
+                }
+
+
+
+                else
+                {
+                    document.getElementById('one').innerHTML="Invalid option ! Please write the correct option"
+                }
+
+                
+                
+                
+            }
+
+            function random()
+            {
+                    var dd=document.getElementById('coupon').style.display="inline";
+                    var gg=document.getElementById('hide').style.display="block";
+            }
+
+            function nogen()
+             {
+                var total = (total_Idli + total_Dosa + total_Puri);
+                document.getElementById('five').innerHTML="Total Price is "+total;
+             }
+
+
+
+            function generate(){
+                var aa=document.getElementById('cat').style.display="block";
+                var bb=document.getElementById('dog').style.display="inline";
+                var cc=document.getElementById('ant').style.display="inline";
+                var ee=document.getElementById('tail').style.display="inline";
+                var ff=document.getElementById('leg').style.display="inline";
+
+            }
+
+            function random1()
+            {
+                    var dd1=document.getElementById('coupon1').style.display="inline";
+                    var gg1=document.getElementById('hide1').style.display="block";
+            }
+
+            function generate1(){
+                var aa1=document.getElementById('cat1').style.display="block";
+                var bb1=document.getElementById('dog1').style.display="inline";
+                var cc1=document.getElementById('ant1').style.display="inline";
+                var ee1=document.getElementById('tail1').style.display="inline";
+                var ff1=document.getElementById('leg1').style.display="inline";
+
+            }
+
+            function random2()
+            {
+                    var dd2=document.getElementById('coupon2').style.display="inline";
+                    var gg2=document.getElementById('hide2').style.display="block";
+            }
+
+            function generate2(){
+                var aa2=document.getElementById('cat2').style.display="block";
+                var bb2=document.getElementById('dog2').style.display="inline";
+                var cc2=document.getElementById('ant2').style.display="inline";
+                var ee2=document.getElementById('tail2').style.display="inline";
+                var ff2=document.getElementById('leg2').style.display="inline";
+
+            }
+
+            //Breakfast_calculation
+
+            function calc()
+            {
+                
+                var f= document.getElementById('idli').value;
+                var g= document.getElementById('dosa').value;
+                var h= document.getElementById('puri').value;
+                var Idli=10;
+                var Dosa=20;
+                var Puri=30;
+
+                var total_Idli=(Idli*f);
+                if (total_Idli !=0)
+                {
+                    document.getElementById('two').innerHTML="Total Price of Idli is  " +total_Idli;
+                }
+                
+                var total_Dosa=(Dosa*g);
+                if (total_Dosa !=0)
+                {
+                    document.getElementById('three').innerHTML="Total Price of Dosa is  " +total_Dosa;
+                }
+                var total_Puri=(Puri*h);
+                if (total_Puri !=0)
+                {
+                document.getElementById('four').innerHTML="Total Price of Puri is  "+total_Puri;
+                    
+                }
+                var c1 = document.getElementById('dog');
+
+                var c2 = document.getElementById('ant');
+
+                if(c1.checked)
+                {
+
+                let text=document.getElementById('coupon').value;
+                //document.write(text);
+                let len =text.length;
+               // document.write(len);
+                if((len==5))
+               {
+
+                var total = (total_Idli + total_Dosa + total_Puri);
+                var dt=total-((total)*(0.05));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt;
+               }
+               if((len==6))
+               {
+
+                var total = (total_Idli + total_Dosa + total_Puri);
+                var dt=total-((total)*(0.06));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt;
+               }
+               if((len==7))
+               {
+
+                var total = (total_Idli + total_Dosa + total_Puri);
+                var dt=total-((total)*(0.07));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt;
+               }
+
+               }
+
+            if(c2.checked)
+
+            {
+                var total = (total_Idli + total_Dosa + total_Puri);
+                document.getElementById('five').innerHTML="Total Price is "+total;
+
+            }
+   
+            }
+            
+
+            
+
+
+            //Lunch_Calculation
+
+            function calc1()
+            {
+                var m= document.getElementById('white').value;
+                var n= document.getElementById('biriyani').value;
+                var o= document.getElementById('thali').value;
+                var White=100;
+                var Biriyani=400;
+                var Thali=200;
+
+                var total_white=(White*m);
+                if (total_white !=0)
+                {
+                    document.getElementById('two').innerHTML="Total Price of White Rice is  " +total_white;
+                }
+                
+                var total_biriyani=(Biriyani*n);
+                if (total_biriyani !=0)
+                {
+                    document.getElementById('three').innerHTML="Total Price of Biriyani is  " +total_biriyani;
+                }
+                var total_thali=(Thali*o);
+                if (total_thali !=0)
+                {
+                document.getElementById('four').innerHTML="Total Price of Thali is  "+total_thali;
+                    
+                }
+
+                let text1=document.getElementById('coupon1').value;
+                let len1 =text1.length;
+                if((len1==5))
+               {
+                   var total = total_white + total_biriyani + total_thali
+                   var dt=total-((total)*(0.05));
+
+
+                document.getElementById('five').innerHTML="Total Price is "+dt;
+               }
+               var c3 = document.getElementById('dog1');
+
+                var c4 = document.getElementById('ant1');
+
+                if(c3.checked)
+                {
+
+                let text=document.getElementById('coupon1').value;
+                //document.write(text);
+                let len =text.length;
+               // document.write(len);
+                if((len==5))
+               {
+
+                var total1 = (total_white + total_biriyani + total_thali);
+                var dt1=total1-((total1)*(0.05));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt1;
+               }
+               if((len==6))
+               {
+
+                var total1 = (total_white + total_biriyani + total_thali);
+                var dt1=total1-((total1)*(0.06));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt1;
+               }
+               if((len==7))
+               {
+
+                var total1 = (total_white + total_biriyani + total_thali);
+                var dt1=total1-((total1)*(0.07));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt1;
+               }
+
+               
+
+               }
+
+            if(c4.checked)
+
+            {
+                var total1 = (total_white + total_biriyani + total_thali);
+                document.getElementById('five').innerHTML="Total Price is "+total1;
+
+            }
+
+                
+            }
+
+            //Dinner_Calculation
+
+            function calc2()
+            {
+                var t= document.getElementById('roti').value;
+                var u= document.getElementById('chapathi').value;
+                var v= document.getElementById('fried').value;
+                var Roti=100;
+                var Chapathi=100;
+                var Fried=100;
+
+                var total_roti=(Roti*t);
+                if (total_roti !=0)
+                {
+                    document.getElementById('two').innerHTML="Total Price of Roti's is  " +total_roti;
+                }
+                
+                var total_chapathi=(Chapathi*u);
+                if (total_chapathi !=0)
+                {
+                    document.getElementById('three').innerHTML="Total Price of Chapathi is  " +total_chapathi;
+                }
+
+                var total_fried=(Fried*v);
+                if (total_fried !=0)
+                {
+                document.getElementById('four').innerHTML="Total Price of Fried Rice is  "+total_fried;
+                    
+                }
+
+                let text2=document.getElementById('coupon2').value;
+                let len2 =text2.length;
+                if((len2==5))
+               {
+
+                var total = total_roti + total_chapathi + total_fried
+                var dt=total-((total)*(0.05));
+                document.getElementById('five').innerHTML="Total Price is "+dt;
+               }
+
+               var c5 = document.getElementById('dog2');
+
+                var c6 = document.getElementById('ant2');
+
+                if(c5.checked)
+                {
+
+                let text=document.getElementById('coupon2').value;
+                //document.write(text);
+                let len =text.length;
+               // document.write(len);
+                if((len==5))
+               {
+
+                var total2 = (total_roti + total_chapathi + total_fried);
+                var dt2=total2-((total2)*(0.05));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt2;
+               }
+
+               if((len==6))
+               {
+
+                var total2 = (total_roti + total_chapathi + total_fried);
+                var dt2=total2-((total2)*(0.06));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt2;
+               }
+
+               if((len==7))
+               {
+
+                var total2 = (total_roti + total_chapathi + total_fried);
+                var dt2=total2-((total2)*(0.07));
+
+               document.getElementById('five').innerHTML="Total Price is "+dt2;
+               }
+
+               }
+
+            if(c6.checked)
+
+            {
+                var total2 = (total_roti + total_chapathi + total_fried);
+                document.getElementById('five').innerHTML="Total Price is "+total2;
+
+            }
+
+                
+            }
+
+
+
+        </script>
+
+    </head>
+    
+    <body style="background-color:aqua" align="center">
+        <form>
+         
+
+            <!---Menu-->
+
+            <b><label style="font-size:20px;" style="color:rgb(3, 3, 81);">Order your food here! !</label></b>
+            <h4 id="food" style="color:darkred;"> Choose your menu <br> 1. Breakfast <br> 2. Lunch<br> 3. Dinner<br><br>
+             
+            
+
+            <label style="font: size 20px;">Enter your order</label> <input type="text" id="orders"/></h4>
+            <input type="button" onclick="order()" value="Submit">
+            <h3 id="one"></h3>
+
+            <!-- Breakfast--Orders-->
+
+            <label hidden id="I"> <h2> Breakfast menu's</h2> <br>1. Enter the number of Idlis</label> <input type="number" hidden id="idli" />
+            <label hidden id="D">2. Enter the number of Dosa</label>  <input type="number" hidden id="dosa" />
+            <label hidden id="P">3. Enter the number of Puri</label>  <input type="number" hidden  id="puri" /><br><br>
+            <input type="button" hidden id="ok" onclick="generate()" value="Coupon"></button>
+
+            <!--Breakfast Coupon section-->
+
+            <label hidden id="cat">Do you want to apply coupon code?</label> 
+            <input type="checkbox" id="dog" hidden onclick="random()"/> <label for="dog" hidden id="tail" > Yes </label> 
+            <input type="checkbox" id="ant"  hidden onclick="nogen()"/> <label for="ant" hidden id="leg" > No </label>
+            <label id="hide" hidden> Coupon code is : </label> <input type="text" id="coupon" value="{{data}}" hidden /><br><br>
+
+            
+            <input hidden id="calculate" type="button" onclick="calc()" value="Calculate"/>
+           
+
+            <!--Lunch--Orders-->
+
+            <label hidden id="WR"> <h2> Lunch menu's</h2> <br>1.Enter the number of Plates(White_Rice)</label>  <input type="number" hidden id="white" />
+            <label hidden id="B">2.Enter the number of Biriyani's</label>  <input type="number" hidden id="biriyani"/>
+            <label hidden id="T">3. Enter the number of Thali's</label>  <input type="number" hidden  id="thali" /><br>
+            <input type="button" hidden id="okk" onclick="generate1()" value="Coupon"></button>
+
+            <!--Lunch Coupon Section--->
+            <label hidden id="cat1">Do you want to apply coupon code?</label> 
+            <input type="checkbox" id="dog1" hidden onclick="random1()"/> <label for="dog1" hidden id="tail1" > Yes </label> <input type="checkbox" id="ant1"  hidden/> <label for="ant1" hidden id="leg1"> No </label>
+            <label id="hide1" hidden> Coupon code is : </label> <input type="text" id="coupon1" value="{{data}}" hidden /><br><br>
+
+            <input hidden id="calculate1" type="button" onclick="calc1()" value="Calculate"/>
+
+            <!---Dinner--Orders-->
+
+            <label hidden id="R"> <h2> Dinner menu's</h2> <br>1. Enter the number of Roti's</label>  <input type="number" hidden id="roti" />
+            <label hidden id="C">2. Enter the number of Chapthi's</label>  <input type="number" hidden id="chapathi"/>
+            <label hidden id="F">3. Enter the number of Plates(Fired_Rice)</label>  <input type="number" hidden  id="fried" /><br><br>
+            <input type="button" hidden id="okkk" onclick="generate2()" value="Coupon"></button>
+
+            <!--Dinner Coupon Section--->
+
+            <label hidden id="cat2">Do you want to apply coupon code?</label> 
+            <input type="checkbox" id="dog2" hidden onclick="random2()"/> <label for="dog2" hidden id="tail2" > Yes </label> <input type="checkbox" id="ant2"  hidden/> <label for="ant2" hidden id="leg2"> No </label>
+            <label id="hide2" hidden> Coupon code is : </label> <input type="text" id="coupon2" value="{{data}}" hidden /><br><br>
+
+            <input hidden id="calculate2" type="button" onclick="calc2()" value="Calculate"/>
+            
+            
+            <h4 id="two"></h4>
+            <h4 id="three"></h4>
+            <h4 id="four"></h4>
+            <h3 id="five"></h3>
+
+        </form>
+    </body>
+</html>
