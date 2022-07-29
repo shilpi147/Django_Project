@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <form action="/Crudapp/successDelete" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{data.id}}" />
+            Username : <span>{{data.username}}</span><br><br>
+            Email : <span>{{data.email}}</span><br><br>
+            Phone Number : <span>{{data.phone}}</span><br><br>
+           <input type="submit" value="Delete">
+             
+
+           
+        </form>
+
+       
+    </body>
+</html>

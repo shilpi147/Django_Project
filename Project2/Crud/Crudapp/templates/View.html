@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>View Records</title>
+    </head>
+    <body>
+        <table border="5">
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+            <th>Update</th>
+            <th>Delete</th>
+            
+            {% for i in data %}
+            <tr></tr>
+                <td>{{i.id}}</td>
+                <td>{{i.username}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.gender}}</td>
+                <td><a href='Update/{{i.id}}'>Update</a></td>
+                <td><a href='Delete/{{i.id}}'>Delete</a></td>
+
+            {% endfor %}
+            </tr>
+        </table>
+        <a href="Insert">Click here to insert records</a>
+    </body>
+</html>

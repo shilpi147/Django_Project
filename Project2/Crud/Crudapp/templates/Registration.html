@@ -1,0 +1,19 @@
+<htmL>
+    <head>
+        <title>REGISTRATION_FORM</title>
+    </head>
+    <body>
+        <h2>REGISTRATION_FORM</h2>
+            <form action="Insert" method="post" >
+                {% csrf_token %}
+                <label>Enter Username:</label></label><input type="text" name="username"/><br><br>
+                <label>Enter Password:</label></label><input type="password" name="password"/><br><br>
+                <label>Enter Email ID:</label></label><input type="email" name="email"/><br><br>
+                <label>Enter Phone Number:</label></label><input type="number" name="phone"/><br><br>
+                <label>Gender:</label><input type="radio" value="Male" name="gender"/>Male
+                                    <input type="radio" value="Female" name="gender"/>Female
+                <br><br>
+                <input type="submit" value="Register"/>
+            </form>
+    </body>
+</htmL>

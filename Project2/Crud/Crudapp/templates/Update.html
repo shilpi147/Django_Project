@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Update Records</title>
+    </head>
+    <body>
+        <form action="/Crudapp/successUpdate" method="post">
+            {% csrf_token %}
+        <input type="hidden" name="id" value="{{data.id}}" />
+        <label>Update Username :</label><input type="text" value="{{data.username}}" name="username"/><br><br>
+        <label>Update Email :</label><input type="email" value="{{data.email}}" name="email"/><br><br>
+        <label>Update Phone Number :</label><input type="number" value="{{data.phone}}" name="phone"/><br><br>
+        <input type="submit" value="Update">
+        </form>
+    </body>
+</html>
