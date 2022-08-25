@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Edit ToDo Lists</title>
+    </head>
+    <body style="background-color:cornsilk" align="center">
+        <form action="/Todo/successEdit" method="post">
+            {% csrf_token %}
+            <h2>Edit the List !</h2>
+        <input type="hidden" name="id" value="{{data.id}}" />
+        <table border="5">
+        <tr>
+            <th><label>Edit list:</label></th>
+            <td height="50" width="50"><input type="text" value="{{data.list}}" name="list"/></td>
+            
+        </tr>
+        <tr>
+            <th><label>Edit Title:</label></th>
+            <td height="50" width="50"><input type="text" value="{{data.title}}" name="title"/></td>
+        </tr>
+        <tr>
+            <th><label>Edit Discription:</label></th>
+            <td height="50" width="50"><input type="text" value="{{data.discription}}" name="discription" style="height: 100px; width: 500px;" /></td>
+        </tr>
+        <tr>
+            <th><label>Edit Due Date:</label></th>
+            <td height="50" width="50"><input type="date" value="{{data.date}}" name="date"/></td>
+
+        </tr>
+        </table>
+        <br>
+        <br>
+       <input type="submit" value="Edit">
+       
+        </form>
+    </body>
+</html>

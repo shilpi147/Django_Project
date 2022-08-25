@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>View ToDo Lists</title>
+    </head>
+    <body style="background-color:cornsilk" align="center">
+        <form action="Edit" method="post">
+            {% csrf_token %}
+            <h2 align="center">ToDo Lists</h2>
+            <table border="2" height="100" width="600" style="background-color:chartreuse" , align="center">
+                <tr>
+                <th>ID</th>
+                <th>List</th>
+                <th>Title</th>
+                <th>Discription</th>
+                <th>Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                </tr>
+
+                {% for i in data %}
+
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.list}}</td>
+                    <td>{{i.title}}</td>
+                    <td>{{i.discription}}</td>
+                    <td>{{i.date}}</td>
+                    <td><a href='Edit/{{i.id}}'>Edit</a></td>
+                    <td><a href='Delete/{{i.id}}'>Delete</a></td>
+                </tr>
+                {% endfor %}
+                
+            </table>
+            <br>
+            <br>
+            <br>
+            <button><a href="Create"> Create ToDo Lists</button></a>
+        </form>
+    </body>
+</html>

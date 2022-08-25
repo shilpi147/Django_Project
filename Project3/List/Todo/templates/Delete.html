@@ -1,0 +1,21 @@
+<html>
+    <body style="background-color:cornsilk" align="center">
+        <form action="/Todo/successDelete" method="post">
+            {% csrf_token %}
+            <table border="2">
+            <tr>
+                <td>
+            <input type="hidden" name="id" value="{{data.id}}" />
+            List: <span>{{data.list}}</span><br><br>
+            Title: <span>{{data.title}}</span><br><br>
+            Discription : <span>{{data.discription}}</span><br><br>
+            Due Date: <span>{{data.date}}</span><br><br>
+           <input type="submit" value="Delete">
+            </td> 
+            </tr>
+           
+        </form>
+
+       
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script>
+            function clear()
+            {
+                a=document.getElementById('1').value;
+                b=document.getElementById('2').value;
+                c=document.getElementById('3').value;
+
+                a.value="";
+                b.value="";
+                c.value="";
+
+            }
+        </script>
+
+    <title>
+        ToDo List
+    </title>
+    </head>
+    <body style="background-color:cornsilk" align="center">
+        <form action ="Save" method="post">
+            {% csrf_token %}
+            <h4 align="center">Create a new List</h4>
+            <table border="5" style="background-color:chartreuse" align="center">
+                
+            <tr>
+            <th><label>ToDo list:</label></th>
+            <td height="50" width="50"><input type="text" id="1" name="list" size="50"/></td>
+            </tr>
+
+            <tr>
+            <th><label>Title:</label></th>
+            <td height="50" width="50"><input type="text" id="2" name="title" size="50"/></td>
+            </tr>
+            <tr>
+            <th><label>Discription:</label></th>
+            <td height="100" width="10"><input type="text" id="3" name="discription" style="height: 100px; width: 500px; text-align:left;" /></td>
+            </tr>
+            <tr>
+            <th><label>Due Date:</label></th>
+            <td height="50" width="50"><input type="date"id="4" name="date" size="35"/></td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <input type="submit" value="Save" style="background-color:rgb(187, 230, 150);" >
+            <input type="button" onclick="clear" value="Clear" style="background-color:rgb(187, 230, 150);" >
+            
+           
+        </form>
+
+    </body>
+
+</html>
