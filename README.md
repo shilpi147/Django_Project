@@ -20,3 +20,10 @@ The update function is used to modify existing records that exist in the databas
 
 DELETE
 The delete function allows users to remove records from a database that is no longer needed.
+
+Project 3:
+Create an app to track and manage TODO tasks with these functional requirements:
+Create TODO with due date
+● Edit
+Delete
+Update
